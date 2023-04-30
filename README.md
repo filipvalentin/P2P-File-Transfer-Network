@@ -3,7 +3,7 @@
 A faculty project, involving network programming where each node is provided with its own server and client. <br>
 The client provides functionalities regarding connections to servers, making requests and single/multi downloads, while the server can expose files to the entire network, each server routing & processing requests to other peers in an optimal manner using caches and backtrace stacks in order to fulfill search requests.
 
-How it works: Every connection between server & client and server & server first checks if a/the server is available (doesn't have a scheduled close via command line (so that busy threads won't stop unexpectedly)), then it sends a request code and based on it both interlocutors communicate based on a predefined protocol.
+How it works: Every connection between server & client and server & server first checks if a/the server is available (isn't scheduled for closing (so that busy threads won't be stoped unexpectedly)), then it sends a request code and based on it both interlocutors communicate based on a predefined protocol.
 Searching in the network: a client connects, the request is queued for broadcasting while another queue is used to store the responses, including the current server's. 
 
 Before being queued though, the request gets a stack of its own in which every server will write its own IP; this functionality provides a backtrace stack that the same servers will use (in the broadcasting threads) in order to try to route the responses back to the origin. 
