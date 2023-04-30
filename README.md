@@ -17,3 +17,6 @@ Then the peer-server will receive the search request, it will add its own IP to 
 If anything fails, the servers are programmed to cascade to every server they may find, but not actively trying to route the responses in an optimal manner. In these situation, there could be made an improvement such that any server will try to reconnect to the server the client is connected to, send the data and cache it such that other requests will be ignored. Although smart, it would raise complexity.
 
 After the client receives all the responses it could get, it'll connect to the desired server via the terminal commands, keeping in mind that although servers communicate across private IPs (and those are the only IPs they are aware of), in order for clients/peers to connect to a remote server outside localhost the public IP is needed.
+
+
+License: This is a faculty project and apparently the copyrights are theirs, either way I don't care what you do with this code.
